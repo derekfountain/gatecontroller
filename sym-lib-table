@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name AM1)(type Legacy)(uri /home/derek/BEETLE/Derek/Hobbies/Electronics/PCBs/GateController/AMlibs/gate_controller_1-cache.lib)(options "")(descr ""))
+  (lib (name AM2)(type Legacy)(uri /home/derek/BEETLE/Derek/Hobbies/Electronics/PCBs/GateController/AMlibs/gate_controller_1-rescue.lib)(options "")(descr ""))
+)
