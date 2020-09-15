@@ -1,0 +1,37 @@
+Wisdom from AM in Slack:
+
+You need a maglock output and a crush sensor input
+And an RF blipper receiver
+You want to keep the motor drive lines away from other lines
+And make them the fattest tracks you can fit
+
+You'd not use a regulator, you'd use a voltage divider
+Andrew Menadue So you'd use a voltage divider for the 24V thing (divide by 5-is)
+If a 'thing' has a switch and it is just contacts and no voltage come sout then they are called 'voltage free' contacts
+An input to an arduino only needs a few hundred uA to work, so the voltage divider only needs to have that passing through it.
+
+When it comes to laying out the board and to som extent the circuit there a a few things you'll need to do.
+You need to separate the high current high voltage stuff from th elow voltage stuff, and look after your grounds.
+You need a motor supply that is separate from the logic supply.
+You need to make sure your tracks are big enough for the 3A motor current. It's urprising how small a track that carries 3A can be.
+The biggest problem you will have is noise. Noise from being out in the open and noise from the motor
+Spurious resets, that sort of thing
+
+Well, you could use a 5V supply to the switch. Just because the motor is 24V doesn't mean the switche have to be, unless they are wired to the 24V internally.
+
+Looking after your ground means taking more care than connecting them together
+
+As it's a 24V motor then yes. You could use a separate supply altogether for the logic. That isolates the noise nicely.
+
+You probably want a good sprinkling of LEDs too, so you can see what's happening and maybe an OLED display too.
+
+Just make the outline bigger, there's no problem. Or put the Uno on top, not underneath. That's probably easier to mount as well.
+
+It's pretty simple, just if this input does this then waggle that, so I think an Uno would do. the only possibly hard work that would need doing would be the RF blipper. There's not a huge amount of flash or RAM but should be enough I'd have thought
+
+It's not really a standard design, but th emotor thing is a sort of h bridge
+00 or 11 is off
+01 is fwd
+10 is backwards
+the input has a current limiting series resistor, clamping diodes and a capacitor to stop high frequency noise to some degree
+
