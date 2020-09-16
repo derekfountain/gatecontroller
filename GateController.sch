@@ -700,13 +700,13 @@ F0 "Sheet5F62F257" 50
 F1 "gate_ctrl_inputs.sch" 50
 $EndSheet
 $Sheet
-S 8750 4550 850  550 
+S 8700 4500 850  550 
 U 5F648DDC
 F0 "Sheet5F648DDB" 50
 F1 "gate_ctrl_power.sch" 50
 $EndSheet
 $Sheet
-S 8850 5400 950  550 
+S 8700 5400 850  550 
 U 5F669EA7
 F0 "Sheet5F669EA6" 50
 F1 "gate_ctrl_outputs.sch" 50
@@ -779,4 +779,32 @@ Wire Wire Line
 Wire Wire Line
 	5500 2200 5500 2500
 Connection ~ 5500 2500
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 5F6FF403
+P 1600 6200
+F 0 "J?" H 1708 6481 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 1708 6390 50  0000 C CNN
+F 2 "" H 1600 6200 50  0001 C CNN
+F 3 "~" H 1600 6200 50  0001 C CNN
+	1    1600 6200
+	1    0    0    -1  
+$EndComp
+Text Notes 1500 6550 0    50   ~ 0
+oled display
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5F701695
+P 3300 6150
+F 0 "J?" H 3192 6435 50  0000 C CNN
+F 1 "Conn_01x03_Female" H 3192 6344 50  0000 C CNN
+F 2 "" H 3300 6150 50  0001 C CNN
+F 3 "~" H 3300 6150 50  0001 C CNN
+	1    3300 6150
+	-1   0    0    -1  
+$EndComp
+Text Notes 3000 6550 0    50   ~ 0
+RF remote\n
+Text Notes 2900 6250 0    50   ~ 0
+POWER\nDATA\nGND
 $EndSCHEMATC
