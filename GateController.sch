@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 3
 Title ""
 Date "lun. 30 mars 2015"
 Rev ""
@@ -296,72 +296,6 @@ Wire Notes Line
 Wire Notes Line
 	10700 1000 10700 500 
 $Comp
-L Device:R_Small R1
-U 1 1 5F5FCCF6
-P 6650 5550
-F 0 "R1" V 6454 5550 50  0000 C CNN
-F 1 "R_Small" V 6545 5550 50  0000 C CNN
-F 2 "" H 6650 5550 50  0001 C CNN
-F 3 "~" H 6650 5550 50  0001 C CNN
-	1    6650 5550
-	0    -1   1    0   
-$EndComp
-$Comp
-L AM2:DIODE-Microtan_65_CPU-cache D3
-U 1 1 5F5FD3D3
-P 6250 5250
-F 0 "D3" V 6288 5172 40  0000 R CNN
-F 1 "DIODE" V 6212 5172 40  0000 R CNN
-F 2 "" H 6250 5250 60  0001 C CNN
-F 3 "" H 6250 5250 60  0000 C CNN
-	1    6250 5250
-	0    1    -1   0   
-$EndComp
-$Comp
-L power:+5V #PWR0102
-U 1 1 5F5FE717
-P 6250 4850
-F 0 "#PWR0102" H 6250 4700 50  0001 C CNN
-F 1 "+5V" H 6265 5023 50  0000 C CNN
-F 2 "" H 6250 4850 50  0001 C CNN
-F 3 "" H 6250 4850 50  0001 C CNN
-	1    6250 4850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C1
-U 1 1 5F5FEC7A
-P 5700 5900
-F 0 "C1" H 5792 5946 50  0000 L CNN
-F 1 "C_Small" H 5792 5855 50  0000 L CNN
-F 2 "" H 5700 5900 50  0001 C CNN
-F 3 "~" H 5700 5900 50  0001 C CNN
-	1    5700 5900
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6550 5550 6250 5550
-Wire Wire Line
-	6250 5550 6250 5450
-Connection ~ 6250 5550
-Wire Wire Line
-	6250 5050 6250 4850
-Wire Wire Line
-	6250 5550 5700 5550
-Wire Wire Line
-	5700 5550 5700 5800
-$Comp
-L AM1:Microtan_65_CPU-cache_GND #PWR0103
-U 1 1 5F5FFCD8
-P 5700 6300
-F 0 "#PWR0103" H 5700 6300 30  0001 C CNN
-F 1 "Microtan_65_CPU-cache_GND" H 5700 6230 30  0001 C CNN
-F 2 "" H 5700 6300 60  0000 C CNN
-F 3 "" H 5700 6300 60  0000 C CNN
-	1    5700 6300
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Relay:RAYEX-L90 K1
 U 1 1 5F6004E4
 P 3650 3350
@@ -461,7 +395,7 @@ Wire Wire Line
 Wire Wire Line
 	4200 3150 4050 3150
 $Comp
-L AM2:DIODE-Microtan_65_CPU-cache D1
+L GateController-rescue:DIODE-Microtan_65_CPU-cache-AM2 D1
 U 1 1 5F60A460
 P 3650 2550
 F 0 "D1" H 3650 2742 40  0000 C CNN
@@ -472,7 +406,7 @@ F 3 "" H 3650 2550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AM2:DIODE-Microtan_65_CPU-cache D2
+L GateController-rescue:DIODE-Microtan_65_CPU-cache-AM2 D2
 U 1 1 5F60ADB2
 P 6000 2500
 F 0 "D2" H 6000 2692 40  0000 C CNN
@@ -503,7 +437,7 @@ Wire Wire Line
 Wire Wire Line
 	6600 3150 6400 3150
 $Comp
-L AM1:GeekAmmo_N-CHANNEL-MOSFET-BSS138 M2
+L GateController-rescue:GeekAmmo_N-CHANNEL-MOSFET-BSS138-AM1 M2
 U 1 1 5F60E051
 P 2100 3400
 F 0 "M2" H 2378 3446 50  0000 L CNN
@@ -514,7 +448,7 @@ F 3 "" H 2100 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AM1:GeekAmmo_N-CHANNEL-MOSFET-BSS138 M1
+L GateController-rescue:GeekAmmo_N-CHANNEL-MOSFET-BSS138-AM1 M1
 U 1 1 5F610BFB
 P 1350 3350
 F 0 "M1" H 1628 3396 50  0000 L CNN
@@ -566,15 +500,8 @@ Connection ~ 4200 1850
 Wire Wire Line
 	4200 1850 4200 2550
 Connection ~ 6600 2500
-Text Notes 5900 5050 2    50   ~ 0
-INPUT
 Text Notes 3450 1700 0    50   ~ 0
 MOTOR\nCONTROL
-Wire Wire Line
-	5700 5550 4150 5550
-Connection ~ 5700 5550
-Wire Wire Line
-	6750 5550 7450 5550
 Wire Wire Line
 	1900 3500 1900 4300
 Wire Wire Line
@@ -597,10 +524,6 @@ Text Label 4150 5350 0    50   ~ 0
 1(Tx)
 Text Label 4150 5450 0    50   ~ 0
 2
-Text Label 4150 5550 0    50   ~ 0
-5(**)
-Text Label 7450 5550 0    50   ~ 0
-MAGICEYE
 Wire Wire Line
 	4850 1700 4200 1700
 Connection ~ 4200 1700
@@ -645,19 +568,6 @@ NoConn ~ 8900 2600
 NoConn ~ 8900 2700
 NoConn ~ 8900 2800
 $Comp
-L power:PWR_FLAG #FLG0102
-U 1 1 5F7E15C6
-P 7450 5250
-F 0 "#FLG0102" H 7450 5325 50  0001 C CNN
-F 1 "PWR_FLAG" H 7450 5423 50  0000 C CNN
-F 2 "" H 7450 5250 50  0001 C CNN
-F 3 "~" H 7450 5250 50  0001 C CNN
-	1    7450 5250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7450 5250 7450 5550
-$Comp
 L power:PWR_FLAG #FLG0103
 U 1 1 5F7E9261
 P 8700 1650
@@ -700,32 +610,6 @@ Wire Wire Line
 Connection ~ 10300 3150
 Wire Wire Line
 	10300 3150 10300 3200
-Wire Wire Line
-	6250 5550 6250 5650
-$Comp
-L pspice:DIODE D4
-U 1 1 5F5FD987
-P 6250 5850
-F 0 "D4" V 6288 5772 40  0000 R CNN
-F 1 "DIODE" V 6212 5772 40  0000 R CNN
-F 2 "" H 6250 5850 60  0001 C CNN
-F 3 "" H 6250 5850 60  0000 C CNN
-	1    6250 5850
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	6250 6050 6250 6300
-$Comp
-L AM1:Microtan_65_CPU-cache_GND #PWR0101
-U 1 1 5F5FE1C8
-P 6250 6300
-F 0 "#PWR0101" H 6250 6300 30  0001 C CNN
-F 1 "Microtan_65_CPU-cache_GND" H 6250 6230 30  0001 C CNN
-F 2 "" H 6250 6300 60  0000 C CNN
-F 3 "" H 6250 6300 60  0000 C CNN
-	1    6250 6300
-	-1   0    0    -1  
-$EndComp
 $Comp
 L power:PWR_FLAG #FLG0106
 U 1 1 5F8A25B2
@@ -774,8 +658,6 @@ F 3 "" H 6150 7650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6150 7350 6150 7650
-Wire Wire Line
-	5700 6000 5700 6300
 $Comp
 L power:GNDPWR #PWR0111
 U 1 1 5F856C71
@@ -811,4 +693,16 @@ F 3 "~" H 4850 1700 50  0001 C CNN
 	1    4850 1700
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 8700 3650 850  550 
+U 5F62F258
+F0 "Sheet5F62F257" 50
+F1 "gate_ctrl_inputs.sch" 50
+$EndSheet
+$Sheet
+S 8750 4550 850  550 
+U 5F648DDC
+F0 "Sheet5F648DDB" 50
+F1 "gate_ctrl_power.sch" 50
+$EndSheet
 $EndSCHEMATC
