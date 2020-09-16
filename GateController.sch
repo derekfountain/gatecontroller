@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date "lun. 30 mars 2015"
 Rev ""
@@ -495,10 +495,10 @@ Connection ~ 4200 2550
 Wire Wire Line
 	4200 1850 6600 1850
 Wire Wire Line
-	6600 1850 6600 2500
+	6600 1850 6600 2200
 Connection ~ 4200 1850
 Wire Wire Line
-	4200 1850 4200 2550
+	4200 1850 4200 2000
 Connection ~ 6600 2500
 Text Notes 3450 1700 0    50   ~ 0
 MOTOR\nCONTROL
@@ -705,4 +705,78 @@ U 5F648DDC
 F0 "Sheet5F648DDB" 50
 F1 "gate_ctrl_power.sch" 50
 $EndSheet
+$Sheet
+S 8850 5400 950  550 
+U 5F669EA7
+F0 "Sheet5F669EA6" 50
+F1 "gate_ctrl_outputs.sch" 50
+$EndSheet
+$Comp
+L Device:LED D?
+U 1 1 5F682773
+P 6250 2200
+F 0 "D?" H 6243 1945 50  0000 C CNN
+F 1 "LED" H 6243 2036 50  0000 C CNN
+F 2 "" H 6250 2200 50  0001 C CNN
+F 3 "~" H 6250 2200 50  0001 C CNN
+	1    6250 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5F6837F7
+P 3950 2000
+F 0 "D?" H 3943 1745 50  0000 C CNN
+F 1 "LED" H 3943 1836 50  0000 C CNN
+F 2 "" H 3950 2000 50  0001 C CNN
+F 3 "~" H 3950 2000 50  0001 C CNN
+	1    3950 2000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 2000 4200 2000
+Connection ~ 4200 2000
+Wire Wire Line
+	4200 2000 4200 2550
+Wire Wire Line
+	6400 2200 6600 2200
+Connection ~ 6600 2200
+Wire Wire Line
+	6600 2200 6600 2500
+$Comp
+L Device:R_Small R?
+U 1 1 5F68A7C5
+P 5800 2200
+F 0 "R?" V 5604 2200 50  0000 C CNN
+F 1 "R_Small" V 5695 2200 50  0000 C CNN
+F 2 "" H 5800 2200 50  0001 C CNN
+F 3 "~" H 5800 2200 50  0001 C CNN
+	1    5800 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F68B356
+P 3500 2000
+F 0 "R?" V 3304 2000 50  0000 C CNN
+F 1 "R_Small" V 3395 2000 50  0000 C CNN
+F 2 "" H 3500 2000 50  0001 C CNN
+F 3 "~" H 3500 2000 50  0001 C CNN
+	1    3500 2000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3600 2000 3800 2000
+Wire Wire Line
+	3400 2000 3150 2000
+Wire Wire Line
+	3150 2000 3150 2550
+Connection ~ 3150 2550
+Wire Wire Line
+	6100 2200 5900 2200
+Wire Wire Line
+	5700 2200 5500 2200
+Wire Wire Line
+	5500 2200 5500 2500
+Connection ~ 5500 2500
 $EndSCHEMATC
