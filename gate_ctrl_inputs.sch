@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 4
 Title ""
 Date ""
 Rev ""
@@ -30,6 +30,8 @@ $Comp
 L power:+5V #PWR?
 U 1 1 5F633AC9
 P 3050 1100
+AR Path="/5F633AC9" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F633AC9" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 3050 950 50  0001 C CNN
 F 1 "+5V" H 3065 1273 50  0000 C CNN
 F 2 "" H 3050 1100 50  0001 C CNN
@@ -41,6 +43,8 @@ $Comp
 L Device:C_Small C?
 U 1 1 5F633ACF
 P 2500 2150
+AR Path="/5F633ACF" Ref="C?"  Part="1" 
+AR Path="/5F62F258/5F633ACF" Ref="C?"  Part="1" 
 F 0 "C?" H 2592 2196 50  0000 L CNN
 F 1 "C_Small" H 2592 2105 50  0000 L CNN
 F 2 "" H 2500 2150 50  0001 C CNN
@@ -75,23 +79,6 @@ $EndComp
 Text Notes 2700 1300 2    50   ~ 0
 24V INPUT
 Wire Wire Line
-	3550 1800 4250 1800
-Text Label 4250 1800 0    50   ~ 0
-MAGICEYE
-$Comp
-L power:PWR_FLAG #FLG?
-U 1 1 5F633AE6
-P 4250 1500
-F 0 "#FLG?" H 4250 1575 50  0001 C CNN
-F 1 "PWR_FLAG" H 4250 1673 50  0000 C CNN
-F 2 "" H 4250 1500 50  0001 C CNN
-F 3 "~" H 4250 1500 50  0001 C CNN
-	1    4250 1500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4250 1500 4250 1800
-Wire Wire Line
 	3050 1800 3050 1900
 Wire Wire Line
 	3050 2300 3050 2550
@@ -99,6 +86,8 @@ $Comp
 L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
 U 1 1 5F633AF5
 P 3050 2550
+AR Path="/5F633AF5" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F633AF5" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 3050 2550 30  0001 C CNN
 F 1 "Microtan_65_CPU-cache_GND" H 3050 2480 30  0001 C CNN
 F 2 "" H 3050 2550 60  0000 C CNN
@@ -137,14 +126,14 @@ $EndComp
 $Comp
 L Device:R_Small R?
 U 1 1 5F63E264
-P 1350 2150
+P 1300 2100
 AR Path="/5F63E264" Ref="R?"  Part="1" 
 AR Path="/5F62F258/5F63E264" Ref="R?"  Part="1" 
-F 0 "R?" V 1154 2150 50  0000 C CNN
-F 1 "R_Small" V 1245 2150 50  0000 C CNN
-F 2 "" H 1350 2150 50  0001 C CNN
-F 3 "~" H 1350 2150 50  0001 C CNN
-	1    1350 2150
+F 0 "R?" V 1104 2100 50  0000 C CNN
+F 1 "R_Small" V 1195 2100 50  0000 C CNN
+F 2 "" H 1300 2100 50  0001 C CNN
+F 3 "~" H 1300 2100 50  0001 C CNN
+	1    1300 2100
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -187,4 +176,753 @@ F 3 "~" H 3450 1800 50  0001 C CNN
 	1    3450 1800
 	0    -1   1    0   
 $EndComp
+$Comp
+L GeekAmmo:N-CHANNEL-MOSFET-BSS138 M?
+U 1 1 5F69A668
+P 3850 1700
+F 0 "M?" H 4128 1746 50  0000 L CNN
+F 1 "N-CHANNEL-MOSFET-BSS138" H 4128 1655 50  0000 L CNN
+F 2 "SOT23-3" H 3880 1850 20  0001 C CNN
+F 3 "" H 3850 1700 50  0001 C CNN
+	1    3850 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 1800 3650 1800
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6A06B9
+P 3950 2500
+AR Path="/5F6A06B9" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6A06B9" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3950 2500 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 3950 2430 30  0001 C CNN
+F 2 "" H 3950 2500 60  0000 C CNN
+F 3 "" H 3950 2500 60  0000 C CNN
+	1    3950 2500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 2000 3950 2500
+$Comp
+L Device:LED D?
+U 1 1 5F6A69CC
+P 3950 1250
+F 0 "D?" V 3989 1132 50  0000 R CNN
+F 1 "LED" V 3898 1132 50  0000 R CNN
+F 2 "" H 3950 1250 50  0001 C CNN
+F 3 "~" H 3950 1250 50  0001 C CNN
+	1    3950 1250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6A7DA8
+P 3950 900
+F 0 "R?" H 4009 946 50  0000 L CNN
+F 1 "R_Small" H 4009 855 50  0000 L CNN
+F 2 "" H 3950 900 50  0001 C CNN
+F 3 "~" H 3950 900 50  0001 C CNN
+	1    3950 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F6A855D
+P 3950 700
+F 0 "#PWR?" H 3950 550 50  0001 C CNN
+F 1 "+5V" H 3965 873 50  0000 C CNN
+F 2 "" H 3950 700 50  0001 C CNN
+F 3 "" H 3950 700 50  0001 C CNN
+	1    3950 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 700  3950 800 
+Wire Wire Line
+	3950 1000 3950 1100
+$Comp
+L GateController-rescue:DIODE-Microtan_65_CPU-cache-AM2 D?
+U 1 1 5F6BCD40
+P 3200 3750
+AR Path="/5F6BCD40" Ref="D?"  Part="1" 
+AR Path="/5F62F258/5F6BCD40" Ref="D?"  Part="1" 
+F 0 "D?" V 3238 3672 40  0000 R CNN
+F 1 "DIODE" V 3162 3672 40  0000 R CNN
+F 2 "" H 3200 3750 60  0001 C CNN
+F 3 "" H 3200 3750 60  0000 C CNN
+	1    3200 3750
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F6BCD46
+P 3200 3350
+AR Path="/5F6BCD46" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6BCD46" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3200 3200 50  0001 C CNN
+F 1 "+5V" H 3215 3523 50  0000 C CNN
+F 2 "" H 3200 3350 50  0001 C CNN
+F 3 "" H 3200 3350 50  0001 C CNN
+	1    3200 3350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5F6BCD4C
+P 2650 4400
+AR Path="/5F6BCD4C" Ref="C?"  Part="1" 
+AR Path="/5F62F258/5F6BCD4C" Ref="C?"  Part="1" 
+F 0 "C?" H 2742 4446 50  0000 L CNN
+F 1 "C_Small" H 2742 4355 50  0000 L CNN
+F 2 "" H 2650 4400 50  0001 C CNN
+F 3 "~" H 2650 4400 50  0001 C CNN
+	1    2650 4400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 4050 3200 4050
+Wire Wire Line
+	3200 4050 3200 3950
+Connection ~ 3200 4050
+Wire Wire Line
+	3200 3550 3200 3350
+Wire Wire Line
+	3200 4050 2650 4050
+Wire Wire Line
+	2650 4050 2650 4300
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6BCD58
+P 2650 4800
+AR Path="/5F6BCD58" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6BCD58" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2650 4800 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 2650 4730 30  0001 C CNN
+F 2 "" H 2650 4800 60  0000 C CNN
+F 3 "" H 2650 4800 60  0000 C CNN
+	1    2650 4800
+	-1   0    0    -1  
+$EndComp
+Text Notes 2850 3550 2    50   ~ 0
+24V INPUT
+Wire Wire Line
+	3200 4050 3200 4150
+Wire Wire Line
+	3200 4550 3200 4800
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6BCD61
+P 3200 4800
+AR Path="/5F6BCD61" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6BCD61" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3200 4800 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 3200 4730 30  0001 C CNN
+F 2 "" H 3200 4800 60  0000 C CNN
+F 3 "" H 3200 4800 60  0000 C CNN
+	1    3200 4800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 4500 2650 4800
+$Comp
+L GateController-rescue:DIODE-Microtan_65_CPU-cache-AM2 D?
+U 1 1 5F6BCD68
+P 3200 4350
+AR Path="/5F6BCD68" Ref="D?"  Part="1" 
+AR Path="/5F62F258/5F6BCD68" Ref="D?"  Part="1" 
+F 0 "D?" V 3238 4272 40  0000 R CNN
+F 1 "DIODE" V 3162 4272 40  0000 R CNN
+F 2 "" H 3200 4350 60  0001 C CNN
+F 3 "" H 3200 4350 60  0000 C CNN
+	1    3200 4350
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6BCD6E
+P 1450 3650
+AR Path="/5F6BCD6E" Ref="R?"  Part="1" 
+AR Path="/5F62F258/5F6BCD6E" Ref="R?"  Part="1" 
+F 0 "R?" V 1254 3650 50  0000 C CNN
+F 1 "R_Small" V 1345 3650 50  0000 C CNN
+F 2 "" H 1450 3650 50  0001 C CNN
+F 3 "~" H 1450 3650 50  0001 C CNN
+	1    1450 3650
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6BCD74
+P 1450 4350
+AR Path="/5F6BCD74" Ref="R?"  Part="1" 
+AR Path="/5F62F258/5F6BCD74" Ref="R?"  Part="1" 
+F 0 "R?" V 1254 4350 50  0000 C CNN
+F 1 "R_Small" V 1345 4350 50  0000 C CNN
+F 2 "" H 1450 4350 50  0001 C CNN
+F 3 "~" H 1450 4350 50  0001 C CNN
+	1    1450 4350
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	950  3250 1450 3250
+Wire Wire Line
+	1450 3250 1450 3550
+Wire Wire Line
+	1450 3750 1450 4050
+Wire Wire Line
+	2650 4050 1450 4050
+Connection ~ 2650 4050
+Connection ~ 1450 4050
+Wire Wire Line
+	1450 4050 1450 4250
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6BCD81
+P 1450 4800
+AR Path="/5F6BCD81" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6BCD81" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1450 4800 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 1450 4730 30  0001 C CNN
+F 2 "" H 1450 4800 60  0000 C CNN
+F 3 "" H 1450 4800 60  0000 C CNN
+	1    1450 4800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 4450 1450 4800
+$Comp
+L Device:R_Small R?
+U 1 1 5F6BCD88
+P 3600 4050
+AR Path="/5F6BCD88" Ref="R?"  Part="1" 
+AR Path="/5F62F258/5F6BCD88" Ref="R?"  Part="1" 
+F 0 "R?" V 3404 4050 50  0000 C CNN
+F 1 "R_Small" V 3495 4050 50  0000 C CNN
+F 2 "" H 3600 4050 50  0001 C CNN
+F 3 "~" H 3600 4050 50  0001 C CNN
+	1    3600 4050
+	0    -1   1    0   
+$EndComp
+$Comp
+L GeekAmmo:N-CHANNEL-MOSFET-BSS138 M?
+U 1 1 5F6BCD8E
+P 4000 3950
+F 0 "M?" H 4278 3996 50  0000 L CNN
+F 1 "N-CHANNEL-MOSFET-BSS138" H 4278 3905 50  0000 L CNN
+F 2 "SOT23-3" H 4030 4100 20  0001 C CNN
+F 3 "" H 4000 3950 50  0001 C CNN
+	1    4000 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4050 3800 4050
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6BCD95
+P 4100 4750
+AR Path="/5F6BCD95" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6BCD95" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4100 4750 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 4100 4680 30  0001 C CNN
+F 2 "" H 4100 4750 60  0000 C CNN
+F 3 "" H 4100 4750 60  0000 C CNN
+	1    4100 4750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 4250 4100 4750
+$Comp
+L Device:LED D?
+U 1 1 5F6BCD9C
+P 4100 3500
+F 0 "D?" V 4139 3382 50  0000 R CNN
+F 1 "LED" V 4048 3382 50  0000 R CNN
+F 2 "" H 4100 3500 50  0001 C CNN
+F 3 "~" H 4100 3500 50  0001 C CNN
+	1    4100 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6BCDA2
+P 4100 3150
+F 0 "R?" H 4159 3196 50  0000 L CNN
+F 1 "R_Small" H 4159 3105 50  0000 L CNN
+F 2 "" H 4100 3150 50  0001 C CNN
+F 3 "~" H 4100 3150 50  0001 C CNN
+	1    4100 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F6BCDA8
+P 4100 2950
+F 0 "#PWR?" H 4100 2800 50  0001 C CNN
+F 1 "+5V" H 4115 3123 50  0000 C CNN
+F 2 "" H 4100 2950 50  0001 C CNN
+F 3 "" H 4100 2950 50  0001 C CNN
+	1    4100 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2950 4100 3050
+Wire Wire Line
+	4100 3250 4100 3350
+$Comp
+L GateController-rescue:DIODE-Microtan_65_CPU-cache-AM2 D?
+U 1 1 5F6C115F
+P 3200 6000
+AR Path="/5F6C115F" Ref="D?"  Part="1" 
+AR Path="/5F62F258/5F6C115F" Ref="D?"  Part="1" 
+F 0 "D?" V 3238 5922 40  0000 R CNN
+F 1 "DIODE" V 3162 5922 40  0000 R CNN
+F 2 "" H 3200 6000 60  0001 C CNN
+F 3 "" H 3200 6000 60  0000 C CNN
+	1    3200 6000
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F6C1165
+P 3200 5600
+AR Path="/5F6C1165" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6C1165" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3200 5450 50  0001 C CNN
+F 1 "+5V" H 3215 5773 50  0000 C CNN
+F 2 "" H 3200 5600 50  0001 C CNN
+F 3 "" H 3200 5600 50  0001 C CNN
+	1    3200 5600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5F6C116B
+P 2650 6650
+AR Path="/5F6C116B" Ref="C?"  Part="1" 
+AR Path="/5F62F258/5F6C116B" Ref="C?"  Part="1" 
+F 0 "C?" H 2742 6696 50  0000 L CNN
+F 1 "C_Small" H 2742 6605 50  0000 L CNN
+F 2 "" H 2650 6650 50  0001 C CNN
+F 3 "~" H 2650 6650 50  0001 C CNN
+	1    2650 6650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 6300 3200 6300
+Wire Wire Line
+	3200 6300 3200 6200
+Connection ~ 3200 6300
+Wire Wire Line
+	3200 5800 3200 5600
+Wire Wire Line
+	3200 6300 2650 6300
+Wire Wire Line
+	2650 6300 2650 6550
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6C1177
+P 2650 7050
+AR Path="/5F6C1177" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6C1177" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2650 7050 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 2650 6980 30  0001 C CNN
+F 2 "" H 2650 7050 60  0000 C CNN
+F 3 "" H 2650 7050 60  0000 C CNN
+	1    2650 7050
+	-1   0    0    -1  
+$EndComp
+Text Notes 2850 5800 2    50   ~ 0
+24V INPUT
+Wire Wire Line
+	3200 6300 3200 6400
+Wire Wire Line
+	3200 6800 3200 7050
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6C1180
+P 3200 7050
+AR Path="/5F6C1180" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6C1180" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3200 7050 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 3200 6980 30  0001 C CNN
+F 2 "" H 3200 7050 60  0000 C CNN
+F 3 "" H 3200 7050 60  0000 C CNN
+	1    3200 7050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 6750 2650 7050
+$Comp
+L GateController-rescue:DIODE-Microtan_65_CPU-cache-AM2 D?
+U 1 1 5F6C1187
+P 3200 6600
+AR Path="/5F6C1187" Ref="D?"  Part="1" 
+AR Path="/5F62F258/5F6C1187" Ref="D?"  Part="1" 
+F 0 "D?" V 3238 6522 40  0000 R CNN
+F 1 "DIODE" V 3162 6522 40  0000 R CNN
+F 2 "" H 3200 6600 60  0001 C CNN
+F 3 "" H 3200 6600 60  0000 C CNN
+	1    3200 6600
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6C118D
+P 1450 5900
+AR Path="/5F6C118D" Ref="R?"  Part="1" 
+AR Path="/5F62F258/5F6C118D" Ref="R?"  Part="1" 
+F 0 "R?" V 1254 5900 50  0000 C CNN
+F 1 "R_Small" V 1345 5900 50  0000 C CNN
+F 2 "" H 1450 5900 50  0001 C CNN
+F 3 "~" H 1450 5900 50  0001 C CNN
+	1    1450 5900
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6C1193
+P 1450 6600
+AR Path="/5F6C1193" Ref="R?"  Part="1" 
+AR Path="/5F62F258/5F6C1193" Ref="R?"  Part="1" 
+F 0 "R?" V 1254 6600 50  0000 C CNN
+F 1 "R_Small" V 1345 6600 50  0000 C CNN
+F 2 "" H 1450 6600 50  0001 C CNN
+F 3 "~" H 1450 6600 50  0001 C CNN
+	1    1450 6600
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	950  5500 1450 5500
+Wire Wire Line
+	1450 5500 1450 5800
+Wire Wire Line
+	1450 6000 1450 6300
+Wire Wire Line
+	2650 6300 1450 6300
+Connection ~ 2650 6300
+Connection ~ 1450 6300
+Wire Wire Line
+	1450 6300 1450 6500
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6C11A0
+P 1450 7050
+AR Path="/5F6C11A0" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6C11A0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1450 7050 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 1450 6980 30  0001 C CNN
+F 2 "" H 1450 7050 60  0000 C CNN
+F 3 "" H 1450 7050 60  0000 C CNN
+	1    1450 7050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 6700 1450 7050
+$Comp
+L Device:R_Small R?
+U 1 1 5F6C11A7
+P 3600 6300
+AR Path="/5F6C11A7" Ref="R?"  Part="1" 
+AR Path="/5F62F258/5F6C11A7" Ref="R?"  Part="1" 
+F 0 "R?" V 3404 6300 50  0000 C CNN
+F 1 "R_Small" V 3495 6300 50  0000 C CNN
+F 2 "" H 3600 6300 50  0001 C CNN
+F 3 "~" H 3600 6300 50  0001 C CNN
+	1    3600 6300
+	0    -1   1    0   
+$EndComp
+$Comp
+L GeekAmmo:N-CHANNEL-MOSFET-BSS138 M?
+U 1 1 5F6C11AD
+P 4000 6200
+F 0 "M?" H 4278 6246 50  0000 L CNN
+F 1 "N-CHANNEL-MOSFET-BSS138" H 4278 6155 50  0000 L CNN
+F 2 "SOT23-3" H 4030 6350 20  0001 C CNN
+F 3 "" H 4000 6200 50  0001 C CNN
+	1    4000 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 6300 3800 6300
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6C11B4
+P 4100 7000
+AR Path="/5F6C11B4" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6C11B4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4100 7000 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 4100 6930 30  0001 C CNN
+F 2 "" H 4100 7000 60  0000 C CNN
+F 3 "" H 4100 7000 60  0000 C CNN
+	1    4100 7000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 6500 4100 7000
+$Comp
+L Device:LED D?
+U 1 1 5F6C11BB
+P 4100 5750
+F 0 "D?" V 4139 5632 50  0000 R CNN
+F 1 "LED" V 4048 5632 50  0000 R CNN
+F 2 "" H 4100 5750 50  0001 C CNN
+F 3 "~" H 4100 5750 50  0001 C CNN
+	1    4100 5750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6C11C1
+P 4100 5400
+F 0 "R?" H 4159 5446 50  0000 L CNN
+F 1 "R_Small" H 4159 5355 50  0000 L CNN
+F 2 "" H 4100 5400 50  0001 C CNN
+F 3 "~" H 4100 5400 50  0001 C CNN
+	1    4100 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F6C11C7
+P 4100 5200
+F 0 "#PWR?" H 4100 5050 50  0001 C CNN
+F 1 "+5V" H 4115 5373 50  0000 C CNN
+F 2 "" H 4100 5200 50  0001 C CNN
+F 3 "" H 4100 5200 50  0001 C CNN
+	1    4100 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 5200 4100 5300
+Wire Wire Line
+	4100 5500 4100 5600
+$Comp
+L GateController-rescue:DIODE-Microtan_65_CPU-cache-AM2 D?
+U 1 1 5F6C6ADA
+P 8450 1800
+AR Path="/5F6C6ADA" Ref="D?"  Part="1" 
+AR Path="/5F62F258/5F6C6ADA" Ref="D?"  Part="1" 
+F 0 "D?" V 8488 1722 40  0000 R CNN
+F 1 "DIODE" V 8412 1722 40  0000 R CNN
+F 2 "" H 8450 1800 60  0001 C CNN
+F 3 "" H 8450 1800 60  0000 C CNN
+	1    8450 1800
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F6C6AE0
+P 8450 1400
+AR Path="/5F6C6AE0" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6C6AE0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8450 1250 50  0001 C CNN
+F 1 "+5V" H 8465 1573 50  0000 C CNN
+F 2 "" H 8450 1400 50  0001 C CNN
+F 3 "" H 8450 1400 50  0001 C CNN
+	1    8450 1400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5F6C6AE6
+P 7900 2450
+AR Path="/5F6C6AE6" Ref="C?"  Part="1" 
+AR Path="/5F62F258/5F6C6AE6" Ref="C?"  Part="1" 
+F 0 "C?" H 7992 2496 50  0000 L CNN
+F 1 "C_Small" H 7992 2405 50  0000 L CNN
+F 2 "" H 7900 2450 50  0001 C CNN
+F 3 "~" H 7900 2450 50  0001 C CNN
+	1    7900 2450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 2100 8450 2100
+Wire Wire Line
+	8450 2100 8450 2000
+Connection ~ 8450 2100
+Wire Wire Line
+	8450 1600 8450 1400
+Wire Wire Line
+	8450 2100 7900 2100
+Wire Wire Line
+	7900 2100 7900 2350
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6C6AF2
+P 7900 2850
+AR Path="/5F6C6AF2" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6C6AF2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7900 2850 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 7900 2780 30  0001 C CNN
+F 2 "" H 7900 2850 60  0000 C CNN
+F 3 "" H 7900 2850 60  0000 C CNN
+	1    7900 2850
+	-1   0    0    -1  
+$EndComp
+Text Notes 8100 1600 2    50   ~ 0
+24V INPUT
+Wire Wire Line
+	8450 2100 8450 2200
+Wire Wire Line
+	8450 2600 8450 2850
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6C6AFB
+P 8450 2850
+AR Path="/5F6C6AFB" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6C6AFB" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8450 2850 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 8450 2780 30  0001 C CNN
+F 2 "" H 8450 2850 60  0000 C CNN
+F 3 "" H 8450 2850 60  0000 C CNN
+	1    8450 2850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 2550 7900 2850
+$Comp
+L GateController-rescue:DIODE-Microtan_65_CPU-cache-AM2 D?
+U 1 1 5F6C6B02
+P 8450 2400
+AR Path="/5F6C6B02" Ref="D?"  Part="1" 
+AR Path="/5F62F258/5F6C6B02" Ref="D?"  Part="1" 
+F 0 "D?" V 8488 2322 40  0000 R CNN
+F 1 "DIODE" V 8412 2322 40  0000 R CNN
+F 2 "" H 8450 2400 60  0001 C CNN
+F 3 "" H 8450 2400 60  0000 C CNN
+	1    8450 2400
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6C6B08
+P 6700 1700
+AR Path="/5F6C6B08" Ref="R?"  Part="1" 
+AR Path="/5F62F258/5F6C6B08" Ref="R?"  Part="1" 
+F 0 "R?" V 6504 1700 50  0000 C CNN
+F 1 "R_Small" V 6595 1700 50  0000 C CNN
+F 2 "" H 6700 1700 50  0001 C CNN
+F 3 "~" H 6700 1700 50  0001 C CNN
+	1    6700 1700
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6C6B0E
+P 6700 2400
+AR Path="/5F6C6B0E" Ref="R?"  Part="1" 
+AR Path="/5F62F258/5F6C6B0E" Ref="R?"  Part="1" 
+F 0 "R?" V 6504 2400 50  0000 C CNN
+F 1 "R_Small" V 6595 2400 50  0000 C CNN
+F 2 "" H 6700 2400 50  0001 C CNN
+F 3 "~" H 6700 2400 50  0001 C CNN
+	1    6700 2400
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6200 1300 6700 1300
+Wire Wire Line
+	6700 1300 6700 1600
+Wire Wire Line
+	6700 1800 6700 2100
+Wire Wire Line
+	7900 2100 6700 2100
+Connection ~ 7900 2100
+Connection ~ 6700 2100
+Wire Wire Line
+	6700 2100 6700 2300
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6C6B1B
+P 6700 2850
+AR Path="/5F6C6B1B" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6C6B1B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6700 2850 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 6700 2780 30  0001 C CNN
+F 2 "" H 6700 2850 60  0000 C CNN
+F 3 "" H 6700 2850 60  0000 C CNN
+	1    6700 2850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 2500 6700 2850
+$Comp
+L Device:R_Small R?
+U 1 1 5F6C6B22
+P 8850 2100
+AR Path="/5F6C6B22" Ref="R?"  Part="1" 
+AR Path="/5F62F258/5F6C6B22" Ref="R?"  Part="1" 
+F 0 "R?" V 8654 2100 50  0000 C CNN
+F 1 "R_Small" V 8745 2100 50  0000 C CNN
+F 2 "" H 8850 2100 50  0001 C CNN
+F 3 "~" H 8850 2100 50  0001 C CNN
+	1    8850 2100
+	0    -1   1    0   
+$EndComp
+$Comp
+L GeekAmmo:N-CHANNEL-MOSFET-BSS138 M?
+U 1 1 5F6C6B28
+P 9250 2000
+F 0 "M?" H 9528 2046 50  0000 L CNN
+F 1 "N-CHANNEL-MOSFET-BSS138" H 9528 1955 50  0000 L CNN
+F 2 "SOT23-3" H 9280 2150 20  0001 C CNN
+F 3 "" H 9250 2000 50  0001 C CNN
+	1    9250 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 2100 9050 2100
+$Comp
+L GateController-rescue:Microtan_65_CPU-cache_GND-AM1 #PWR?
+U 1 1 5F6C6B2F
+P 9350 2800
+AR Path="/5F6C6B2F" Ref="#PWR?"  Part="1" 
+AR Path="/5F62F258/5F6C6B2F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9350 2800 30  0001 C CNN
+F 1 "Microtan_65_CPU-cache_GND" H 9350 2730 30  0001 C CNN
+F 2 "" H 9350 2800 60  0000 C CNN
+F 3 "" H 9350 2800 60  0000 C CNN
+	1    9350 2800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 2300 9350 2800
+$Comp
+L Device:LED D?
+U 1 1 5F6C6B36
+P 9350 1550
+F 0 "D?" V 9389 1432 50  0000 R CNN
+F 1 "LED" V 9298 1432 50  0000 R CNN
+F 2 "" H 9350 1550 50  0001 C CNN
+F 3 "~" H 9350 1550 50  0001 C CNN
+	1    9350 1550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6C6B3C
+P 9350 1200
+F 0 "R?" H 9409 1246 50  0000 L CNN
+F 1 "R_Small" H 9409 1155 50  0000 L CNN
+F 2 "" H 9350 1200 50  0001 C CNN
+F 3 "~" H 9350 1200 50  0001 C CNN
+	1    9350 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F6C6B42
+P 9350 1000
+F 0 "#PWR?" H 9350 850 50  0001 C CNN
+F 1 "+5V" H 9365 1173 50  0000 C CNN
+F 2 "" H 9350 1000 50  0001 C CNN
+F 3 "" H 9350 1000 50  0001 C CNN
+	1    9350 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 1000 9350 1100
+Wire Wire Line
+	9350 1300 9350 1400
 $EndSCHEMATC

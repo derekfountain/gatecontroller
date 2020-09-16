@@ -38,12 +38,12 @@ $EndComp
 $Comp
 L power:GNDPWR #PWR?
 U 1 1 5F64AE7E
-P 2600 1750
-F 0 "#PWR?" H 2600 1550 50  0001 C CNN
-F 1 "GNDPWR" H 2604 1596 50  0000 C CNN
-F 2 "" H 2600 1700 50  0001 C CNN
-F 3 "" H 2600 1700 50  0001 C CNN
-	1    2600 1750
+P 2600 2200
+F 0 "#PWR?" H 2600 2000 50  0001 C CNN
+F 1 "GNDPWR" H 2604 2046 50  0000 C CNN
+F 2 "" H 2600 2150 50  0001 C CNN
+F 3 "" H 2600 2150 50  0001 C CNN
+	1    2600 2200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -63,8 +63,6 @@ Wire Wire Line
 	2150 1650 2150 1850
 Wire Wire Line
 	1750 1550 2600 1550
-Wire Wire Line
-	2600 1550 2600 1750
 Wire Wire Line
 	1750 1450 2600 1450
 Wire Wire Line
@@ -107,57 +105,57 @@ Wire Wire Line
 $Comp
 L Converter_DCDC:OKI-78SR-5_1.5-W36H-C U?
 U 1 1 5F64EDA1
-P 4100 3050
-F 0 "U?" H 4100 3292 50  0000 C CNN
-F 1 "OKI-78SR-5_1.5-W36H-C" H 4100 3201 50  0000 C CNN
-F 2 "Converter_DCDC:Converter_DCDC_muRata_OKI-78SR_Horizontal" H 4150 2800 50  0001 L CIN
-F 3 "https://power.murata.com/data/power/oki-78sr.pdf" H 4100 3050 50  0001 C CNN
-	1    4100 3050
+P 5050 4550
+F 0 "U?" H 5050 4792 50  0000 C CNN
+F 1 "OKI-78SR-5_1.5-W36H-C" H 5050 4701 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_muRata_OKI-78SR_Horizontal" H 5100 4300 50  0001 L CIN
+F 3 "https://power.murata.com/data/power/oki-78sr.pdf" H 5050 4550 50  0001 C CNN
+	1    5050 4550
 	1    0    0    -1  
 $EndComp
 $Comp
 L Microtan_65_CPU-cache:GND #PWR?
 U 1 1 5F64FAA5
-P 4100 3600
-F 0 "#PWR?" H 4100 3600 30  0001 C CNN
-F 1 "GND" H 4100 3530 30  0001 C CNN
-F 2 "" H 4100 3600 60  0000 C CNN
-F 3 "" H 4100 3600 60  0000 C CNN
-	1    4100 3600
+P 5050 5100
+F 0 "#PWR?" H 5050 5100 30  0001 C CNN
+F 1 "GND" H 5050 5030 30  0001 C CNN
+F 2 "" H 5050 5100 60  0000 C CNN
+F 3 "" H 5050 5100 60  0000 C CNN
+	1    5050 5100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+12V #PWR?
 U 1 1 5F6500BB
-P 3400 2750
-F 0 "#PWR?" H 3400 2600 50  0001 C CNN
-F 1 "+12V" H 3415 2923 50  0000 C CNN
-F 2 "" H 3400 2750 50  0001 C CNN
-F 3 "" H 3400 2750 50  0001 C CNN
-	1    3400 2750
+P 4350 4250
+F 0 "#PWR?" H 4350 4100 50  0001 C CNN
+F 1 "+12V" H 4365 4423 50  0000 C CNN
+F 2 "" H 4350 4250 50  0001 C CNN
+F 3 "" H 4350 4250 50  0001 C CNN
+	1    4350 4250
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 5F650860
-P 5000 2750
-F 0 "#PWR?" H 5000 2600 50  0001 C CNN
-F 1 "+5V" H 5015 2923 50  0000 C CNN
-F 2 "" H 5000 2750 50  0001 C CNN
-F 3 "" H 5000 2750 50  0001 C CNN
-	1    5000 2750
+P 5950 4250
+F 0 "#PWR?" H 5950 4100 50  0001 C CNN
+F 1 "+5V" H 5965 4423 50  0000 C CNN
+F 2 "" H 5950 4250 50  0001 C CNN
+F 3 "" H 5950 4250 50  0001 C CNN
+	1    5950 4250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3400 2750 3400 3050
+	4350 4250 4350 4550
 Wire Wire Line
-	3400 3050 3800 3050
+	4350 4550 4750 4550
 Wire Wire Line
-	4100 3350 4100 3500
+	5050 4850 5050 5000
 Wire Wire Line
-	4400 3050 5000 3050
+	5350 4550 5950 4550
 Wire Wire Line
-	5000 3050 5000 2750
+	5950 4550 5950 4250
 $Comp
 L Device:L L?
 U 1 1 5F651908
@@ -242,24 +240,24 @@ Wire Wire Line
 $Comp
 L Device:C_Small C?
 U 1 1 5F65AAD1
-P 5000 3300
-F 0 "C?" H 5092 3346 50  0000 L CNN
-F 1 "C_Small" H 5092 3255 50  0000 L CNN
-F 2 "" H 5000 3300 50  0001 C CNN
-F 3 "~" H 5000 3300 50  0001 C CNN
-	1    5000 3300
+P 5950 4800
+F 0 "C?" H 6042 4846 50  0000 L CNN
+F 1 "C_Small" H 6042 4755 50  0000 L CNN
+F 2 "" H 5950 4800 50  0001 C CNN
+F 3 "~" H 5950 4800 50  0001 C CNN
+	1    5950 4800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4100 3500 5000 3500
+	5050 5000 5950 5000
 Wire Wire Line
-	5000 3500 5000 3400
-Connection ~ 4100 3500
+	5950 5000 5950 4900
+Connection ~ 5050 5000
 Wire Wire Line
-	4100 3500 4100 3600
+	5050 5000 5050 5100
 Wire Wire Line
-	5000 3050 5000 3200
-Connection ~ 5000 3050
+	5950 4550 5950 4700
+Connection ~ 5950 4550
 $Comp
 L power:+12VA #PWR?
 U 1 1 5F6748D3
@@ -317,42 +315,171 @@ Wire Wire Line
 $Comp
 L Device:Jumper JP?
 U 1 1 5F678279
-P 4600 5250
-F 0 "JP?" H 4600 5514 50  0000 C CNN
-F 1 "Jumper" H 4600 5423 50  0000 C CNN
-F 2 "" H 4600 5250 50  0001 C CNN
-F 3 "~" H 4600 5250 50  0001 C CNN
-	1    4600 5250
+P 5650 6650
+F 0 "JP?" H 5650 6914 50  0000 C CNN
+F 1 "Jumper" H 5650 6823 50  0000 C CNN
+F 2 "" H 5650 6650 50  0001 C CNN
+F 3 "~" H 5650 6650 50  0001 C CNN
+	1    5650 6650
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+12VA #PWR?
 U 1 1 5F678932
-P 4000 5050
-F 0 "#PWR?" H 4000 4900 50  0001 C CNN
-F 1 "+12VA" H 4015 5223 50  0000 C CNN
-F 2 "" H 4000 5050 50  0001 C CNN
-F 3 "" H 4000 5050 50  0001 C CNN
-	1    4000 5050
+P 5050 6450
+F 0 "#PWR?" H 5050 6300 50  0001 C CNN
+F 1 "+12VA" H 5065 6623 50  0000 C CNN
+F 2 "" H 5050 6450 50  0001 C CNN
+F 3 "" H 5050 6450 50  0001 C CNN
+	1    5050 6450
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+12V #PWR?
 U 1 1 5F679135
-P 5150 5050
-F 0 "#PWR?" H 5150 4900 50  0001 C CNN
-F 1 "+12V" H 5165 5223 50  0000 C CNN
-F 2 "" H 5150 5050 50  0001 C CNN
-F 3 "" H 5150 5050 50  0001 C CNN
-	1    5150 5050
+P 6200 6450
+F 0 "#PWR?" H 6200 6300 50  0001 C CNN
+F 1 "+12V" H 6215 6623 50  0000 C CNN
+F 2 "" H 6200 6450 50  0001 C CNN
+F 3 "" H 6200 6450 50  0001 C CNN
+	1    6200 6450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4000 5050 4000 5250
+	5050 6450 5050 6650
 Wire Wire Line
-	4000 5250 4300 5250
+	5050 6650 5350 6650
 Wire Wire Line
-	4900 5250 5150 5250
+	5950 6650 6200 6650
 Wire Wire Line
-	5150 5250 5150 5050
+	6200 6650 6200 6450
+Text Notes 5150 7000 0    50   ~ 0
+Link if using one 12V PSU
+Text Notes 1500 6550 0    50   ~ 0
+12V PSu for maglock, if needed, otherwise link 12V supplies together
+Text Notes 1750 5100 0    50   ~ 0
+Filtering for 12V supply
+Text Notes 6350 4450 0    50   ~ 0
+Converter for 5v supply to logic
+Text Notes 950  850  0    50   ~ 0
++24V supply with it's own ground. This is for the motor supply. This GND\nand supply don't go to anything else.
+$Comp
+L Amplifier_Operational:TLV2371D U?
+U 1 1 5F6CA701
+P 4750 1900
+F 0 "U?" H 5094 1946 50  0000 L CNN
+F 1 "TLV2371D" H 5094 1855 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4650 1700 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv2375.pdf" H 4900 2050 50  0001 C CNN
+	1    4750 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6CCC67
+P 2600 1950
+F 0 "R?" H 2659 1996 50  0000 L CNN
+F 1 "R_Small" H 2659 1905 50  0000 L CNN
+F 2 "" H 2600 1950 50  0001 C CNN
+F 3 "~" H 2600 1950 50  0001 C CNN
+	1    2600 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 1550 2600 1800
+Wire Wire Line
+	2600 2050 2600 2100
+Wire Wire Line
+	4450 1800 2600 1800
+Connection ~ 2600 1800
+Wire Wire Line
+	2600 1800 2600 1850
+Wire Wire Line
+	4450 2000 3750 2000
+Wire Wire Line
+	3450 2000 3450 2100
+Wire Wire Line
+	3450 2100 2600 2100
+Connection ~ 2600 2100
+Wire Wire Line
+	2600 2100 2600 2200
+Text Notes 5100 1150 0    50   ~ 0
+This needs thinking about, grounds need to be linked
+$Comp
+L power:+5V #PWR?
+U 1 1 5F6CFCC9
+P 4650 1600
+F 0 "#PWR?" H 4650 1450 50  0001 C CNN
+F 1 "+5V" H 4665 1773 50  0000 C CNN
+F 2 "" H 4650 1600 50  0001 C CNN
+F 3 "" H 4650 1600 50  0001 C CNN
+	1    4650 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Microtan_65_CPU-cache:GND #PWR?
+U 1 1 5F6D0394
+P 4650 2200
+F 0 "#PWR?" H 4650 2200 30  0001 C CNN
+F 1 "GND" H 4650 2130 30  0001 C CNN
+F 2 "" H 4650 2200 60  0000 C CNN
+F 3 "" H 4650 2200 60  0000 C CNN
+	1    4650 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6D17FE
+P 4650 1200
+F 0 "R?" V 4454 1200 50  0000 C CNN
+F 1 "R_Small" V 4545 1200 50  0000 C CNN
+F 2 "" H 4650 1200 50  0001 C CNN
+F 3 "~" H 4650 1200 50  0001 C CNN
+	1    4650 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6D20B0
+P 3750 2250
+F 0 "R?" H 3809 2296 50  0000 L CNN
+F 1 "R_Small" H 3809 2205 50  0000 L CNN
+F 2 "" H 3750 2250 50  0001 C CNN
+F 3 "~" H 3750 2250 50  0001 C CNN
+	1    3750 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Microtan_65_CPU-cache:GND #PWR?
+U 1 1 5F6D2B1C
+P 3750 2500
+F 0 "#PWR?" H 3750 2500 30  0001 C CNN
+F 1 "GND" H 3750 2430 30  0001 C CNN
+F 2 "" H 3750 2500 60  0000 C CNN
+F 3 "" H 3750 2500 60  0000 C CNN
+	1    3750 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2500 3750 2350
+Wire Wire Line
+	3750 2150 3750 2000
+Connection ~ 3750 2000
+Wire Wire Line
+	3750 2000 3450 2000
+Wire Wire Line
+	3750 2000 3750 1200
+Wire Wire Line
+	3750 1200 4550 1200
+Wire Wire Line
+	4800 1200 5800 1200
+Wire Wire Line
+	5800 1200 5800 1900
+Wire Wire Line
+	5800 1900 5050 1900
+Wire Wire Line
+	5800 1900 6600 1900
+Connection ~ 5800 1900
+Text Notes 5000 2400 0    50   ~ 0
+Current sense
 $EndSCHEMATC
