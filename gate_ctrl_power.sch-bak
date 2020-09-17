@@ -1,0 +1,590 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L mirotan-due-cassette-shield-cache:Connector_Generic_Conn_01x03 J?
+U 1 1 5F6496E9
+P 1550 1550
+F 0 "J?" H 1468 1867 50  0000 C CNN
+F 1 "Connector_Generic_Conn_01x03" H 1468 1776 50  0000 C CNN
+F 2 "" H 1550 1550 50  0001 C CNN
+F 3 "" H 1550 1550 50  0001 C CNN
+	1    1550 1550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+24V #PWR?
+U 1 1 5F64A624
+P 2600 1300
+F 0 "#PWR?" H 2600 1150 50  0001 C CNN
+F 1 "+24V" H 2615 1473 50  0000 C CNN
+F 2 "" H 2600 1300 50  0001 C CNN
+F 3 "" H 2600 1300 50  0001 C CNN
+	1    2600 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5F64AE7E
+P 2600 2200
+F 0 "#PWR?" H 2600 2000 50  0001 C CNN
+F 1 "GNDPWR" H 2604 2046 50  0000 C CNN
+F 2 "" H 2600 2150 50  0001 C CNN
+F 3 "" H 2600 2150 50  0001 C CNN
+	1    2600 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth_Protective #PWR?
+U 1 1 5F64C0D9
+P 2150 1850
+F 0 "#PWR?" H 2400 1600 50  0001 C CNN
+F 1 "Earth_Protective" H 2600 1700 50  0001 C CNN
+F 2 "" H 2150 1750 50  0001 C CNN
+F 3 "~" H 2150 1750 50  0001 C CNN
+	1    2150 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 1650 2150 1650
+Wire Wire Line
+	2150 1650 2150 1850
+Wire Wire Line
+	1750 1550 2600 1550
+Wire Wire Line
+	1750 1450 2600 1450
+Wire Wire Line
+	2600 1450 2600 1300
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 5F64D60B
+P 1600 3050
+F 0 "J?" H 1708 3231 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 1708 3140 50  0000 C CNN
+F 2 "" H 1600 3050 50  0001 C CNN
+F 3 "~" H 1600 3050 50  0001 C CNN
+	1    1600 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F64DCF8
+P 2550 2800
+F 0 "#PWR?" H 2550 2650 50  0001 C CNN
+F 1 "+12V" H 2565 2973 50  0000 C CNN
+F 2 "" H 2550 2800 50  0001 C CNN
+F 3 "" H 2550 2800 50  0001 C CNN
+	1    2550 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Microtan_65_CPU-cache:GND #PWR?
+U 1 1 5F64E29F
+P 2550 3350
+F 0 "#PWR?" H 2550 3350 30  0001 C CNN
+F 1 "GND" H 2550 3280 30  0001 C CNN
+F 2 "" H 2550 3350 60  0000 C CNN
+F 3 "" H 2550 3350 60  0000 C CNN
+	1    2550 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3150 2550 3150
+$Comp
+L Converter_DCDC:OKI-78SR-5_1.5-W36H-C U?
+U 1 1 5F64EDA1
+P 5050 4550
+F 0 "U?" H 5050 4792 50  0000 C CNN
+F 1 "OKI-78SR-5_1.5-W36H-C" H 5050 4701 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_muRata_OKI-78SR_Horizontal" H 5100 4300 50  0001 L CIN
+F 3 "https://power.murata.com/data/power/oki-78sr.pdf" H 5050 4550 50  0001 C CNN
+	1    5050 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Microtan_65_CPU-cache:GND #PWR?
+U 1 1 5F64FAA5
+P 5050 5100
+F 0 "#PWR?" H 5050 5100 30  0001 C CNN
+F 1 "GND" H 5050 5030 30  0001 C CNN
+F 2 "" H 5050 5100 60  0000 C CNN
+F 3 "" H 5050 5100 60  0000 C CNN
+	1    5050 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F6500BB
+P 4350 4250
+F 0 "#PWR?" H 4350 4100 50  0001 C CNN
+F 1 "+12V" H 4365 4423 50  0000 C CNN
+F 2 "" H 4350 4250 50  0001 C CNN
+F 3 "" H 4350 4250 50  0001 C CNN
+	1    4350 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F650860
+P 5950 4250
+F 0 "#PWR?" H 5950 4100 50  0001 C CNN
+F 1 "+5V" H 5965 4423 50  0000 C CNN
+F 2 "" H 5950 4250 50  0001 C CNN
+F 3 "" H 5950 4250 50  0001 C CNN
+	1    5950 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4250 4350 4550
+Wire Wire Line
+	4350 4550 4750 4550
+Wire Wire Line
+	5050 4850 5050 5000
+Wire Wire Line
+	5350 4550 5950 4550
+Wire Wire Line
+	5950 4550 5950 4250
+$Comp
+L Device:L L?
+U 1 1 5F651908
+P 2150 3050
+F 0 "L?" V 1969 3050 50  0000 C CNN
+F 1 "L" V 2060 3050 50  0000 C CNN
+F 2 "" H 2150 3050 50  0001 C CNN
+F 3 "~" H 2150 3050 50  0001 C CNN
+	1    2150 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 3050 2000 3050
+Wire Wire Line
+	2300 3050 2550 3050
+Wire Wire Line
+	2550 3050 2550 2800
+$Comp
+L Device:C_Small C?
+U 1 1 5F65355C
+P 2650 4450
+F 0 "C?" H 2742 4496 50  0000 L CNN
+F 1 "C_Small" H 2742 4405 50  0000 L CNN
+F 2 "" H 2650 4450 50  0001 C CNN
+F 3 "~" H 2650 4450 50  0001 C CNN
+	1    2650 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5F653D01
+P 2150 4400
+F 0 "C?" H 2268 4446 50  0000 L CNN
+F 1 "CP" H 2268 4355 50  0000 L CNN
+F 2 "" H 2188 4250 50  0001 C CNN
+F 3 "~" H 2150 4400 50  0001 C CNN
+	1    2150 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F655155
+P 2150 4050
+F 0 "#PWR?" H 2150 3900 50  0001 C CNN
+F 1 "+12V" H 2165 4223 50  0000 C CNN
+F 2 "" H 2150 4050 50  0001 C CNN
+F 3 "" H 2150 4050 50  0001 C CNN
+	1    2150 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Microtan_65_CPU-cache:GND #PWR?
+U 1 1 5F65610A
+P 2150 4850
+F 0 "#PWR?" H 2150 4850 30  0001 C CNN
+F 1 "GND" H 2150 4780 30  0001 C CNN
+F 2 "" H 2150 4850 60  0000 C CNN
+F 3 "" H 2150 4850 60  0000 C CNN
+	1    2150 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 4050 2150 4100
+Wire Wire Line
+	2150 4550 2150 4700
+Wire Wire Line
+	2150 4700 2650 4700
+Wire Wire Line
+	2650 4700 2650 4550
+Connection ~ 2150 4700
+Wire Wire Line
+	2150 4700 2150 4850
+Wire Wire Line
+	2650 4100 2650 4350
+Wire Wire Line
+	2550 3150 2550 3350
+Wire Wire Line
+	2150 4100 2650 4100
+Connection ~ 2150 4100
+Wire Wire Line
+	2150 4100 2150 4250
+$Comp
+L Device:C_Small C?
+U 1 1 5F65AAD1
+P 5950 4800
+F 0 "C?" H 6042 4846 50  0000 L CNN
+F 1 "C_Small" H 6042 4755 50  0000 L CNN
+F 2 "" H 5950 4800 50  0001 C CNN
+F 3 "~" H 5950 4800 50  0001 C CNN
+	1    5950 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5000 5950 5000
+Wire Wire Line
+	5950 5000 5950 4900
+Connection ~ 5050 5000
+Wire Wire Line
+	5050 5000 5050 5100
+Wire Wire Line
+	5950 4550 5950 4700
+Connection ~ 5950 4550
+$Comp
+L power:+12VA #PWR?
+U 1 1 5F6748D3
+P 2850 5650
+F 0 "#PWR?" H 2850 5500 50  0001 C CNN
+F 1 "+12VA" H 2865 5823 50  0000 C CNN
+F 2 "" H 2850 5650 50  0001 C CNN
+F 3 "" H 2850 5650 50  0001 C CNN
+	1    2850 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 5F676C5F
+P 1900 5900
+F 0 "J?" H 2008 6081 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 2008 5990 50  0000 C CNN
+F 2 "" H 1900 5900 50  0001 C CNN
+F 3 "~" H 1900 5900 50  0001 C CNN
+	1    1900 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Microtan_65_CPU-cache:GND #PWR?
+U 1 1 5F676C6B
+P 2850 6200
+F 0 "#PWR?" H 2850 6200 30  0001 C CNN
+F 1 "GND" H 2850 6130 30  0001 C CNN
+F 2 "" H 2850 6200 60  0000 C CNN
+F 3 "" H 2850 6200 60  0000 C CNN
+	1    2850 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 6000 2850 6000
+$Comp
+L Device:L L?
+U 1 1 5F676C72
+P 2450 5900
+F 0 "L?" V 2269 5900 50  0000 C CNN
+F 1 "L" V 2360 5900 50  0000 C CNN
+F 2 "" H 2450 5900 50  0001 C CNN
+F 3 "~" H 2450 5900 50  0001 C CNN
+	1    2450 5900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2100 5900 2300 5900
+Wire Wire Line
+	2600 5900 2850 5900
+Wire Wire Line
+	2850 5900 2850 5650
+Wire Wire Line
+	2850 6000 2850 6200
+$Comp
+L Device:Jumper JP?
+U 1 1 5F678279
+P 5650 6650
+F 0 "JP?" H 5650 6914 50  0000 C CNN
+F 1 "Jumper" H 5650 6823 50  0000 C CNN
+F 2 "" H 5650 6650 50  0001 C CNN
+F 3 "~" H 5650 6650 50  0001 C CNN
+	1    5650 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12VA #PWR?
+U 1 1 5F678932
+P 5050 6450
+F 0 "#PWR?" H 5050 6300 50  0001 C CNN
+F 1 "+12VA" H 5065 6623 50  0000 C CNN
+F 2 "" H 5050 6450 50  0001 C CNN
+F 3 "" H 5050 6450 50  0001 C CNN
+	1    5050 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F679135
+P 6200 6450
+F 0 "#PWR?" H 6200 6300 50  0001 C CNN
+F 1 "+12V" H 6215 6623 50  0000 C CNN
+F 2 "" H 6200 6450 50  0001 C CNN
+F 3 "" H 6200 6450 50  0001 C CNN
+	1    6200 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 6450 5050 6650
+Wire Wire Line
+	5050 6650 5350 6650
+Wire Wire Line
+	5950 6650 6200 6650
+Wire Wire Line
+	6200 6650 6200 6450
+Text Notes 5150 7000 0    50   ~ 0
+Link if using one 12V PSU
+Text Notes 1500 6550 0    50   ~ 0
+12V PSu for maglock, if needed, otherwise link 12V supplies together
+Text Notes 1750 5100 0    50   ~ 0
+Filtering for 12V supply
+Text Notes 6350 4450 0    50   ~ 0
+Converter for 5v supply to logic
+Text Notes 950  850  0    50   ~ 0
++24V supply with it's own ground. This is for the motor supply. This GND\nand supply don't go to anything else.
+$Comp
+L Amplifier_Operational:TLV2371D U?
+U 1 1 5F6CA701
+P 5800 1900
+F 0 "U?" H 6144 1946 50  0000 L CNN
+F 1 "TLV2371D" H 6144 1855 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5700 1700 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv2375.pdf" H 5950 2050 50  0001 C CNN
+	1    5800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6CCC67
+P 2600 1950
+F 0 "R?" H 2659 1996 50  0000 L CNN
+F 1 "R_Small" H 2659 1905 50  0000 L CNN
+F 2 "" H 2600 1950 50  0001 C CNN
+F 3 "~" H 2600 1950 50  0001 C CNN
+	1    2600 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1800 4250 1800
+Wire Wire Line
+	5500 2000 4800 2000
+Wire Wire Line
+	4500 2000 4500 2100
+Wire Wire Line
+	4500 2100 4250 2100
+Text Notes 6150 1150 0    50   ~ 0
+This needs thinking about, grounds need to be linked
+$Comp
+L power:+5V #PWR?
+U 1 1 5F6CFCC9
+P 5700 1600
+F 0 "#PWR?" H 5700 1450 50  0001 C CNN
+F 1 "+5V" H 5715 1773 50  0000 C CNN
+F 2 "" H 5700 1600 50  0001 C CNN
+F 3 "" H 5700 1600 50  0001 C CNN
+	1    5700 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Microtan_65_CPU-cache:GND #PWR?
+U 1 1 5F6D0394
+P 5700 2200
+F 0 "#PWR?" H 5700 2200 30  0001 C CNN
+F 1 "GND" H 5700 2130 30  0001 C CNN
+F 2 "" H 5700 2200 60  0000 C CNN
+F 3 "" H 5700 2200 60  0000 C CNN
+	1    5700 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6D17FE
+P 5700 1200
+F 0 "R?" V 5504 1200 50  0000 C CNN
+F 1 "R_Small" V 5595 1200 50  0000 C CNN
+F 2 "" H 5700 1200 50  0001 C CNN
+F 3 "~" H 5700 1200 50  0001 C CNN
+	1    5700 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6D20B0
+P 4800 2750
+F 0 "R?" H 4859 2796 50  0000 L CNN
+F 1 "R_Small" H 4859 2705 50  0000 L CNN
+F 2 "" H 4800 2750 50  0001 C CNN
+F 3 "~" H 4800 2750 50  0001 C CNN
+	1    4800 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Microtan_65_CPU-cache:GND #PWR?
+U 1 1 5F6D2B1C
+P 4800 3000
+F 0 "#PWR?" H 4800 3000 30  0001 C CNN
+F 1 "GND" H 4800 2930 30  0001 C CNN
+F 2 "" H 4800 3000 60  0000 C CNN
+F 3 "" H 4800 3000 60  0000 C CNN
+	1    4800 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3000 4800 2850
+Wire Wire Line
+	4800 2650 4800 2000
+Connection ~ 4800 2000
+Wire Wire Line
+	4800 2000 4500 2000
+Wire Wire Line
+	4800 2000 4800 1200
+Wire Wire Line
+	4800 1200 5600 1200
+Wire Wire Line
+	6850 1200 6850 1900
+Wire Wire Line
+	6850 1900 6100 1900
+Wire Wire Line
+	6850 1900 7650 1900
+Connection ~ 6850 1900
+Text Notes 6050 2400 0    50   ~ 0
+Current sense
+Wire Wire Line
+	5800 1200 6850 1200
+$Comp
+L Device:C_Small C?
+U 1 1 5F6DD4A0
+P 4250 1950
+F 0 "C?" H 4342 1996 50  0000 L CNN
+F 1 "C_Small" H 4342 1905 50  0000 L CNN
+F 2 "" H 4250 1950 50  0001 C CNN
+F 3 "~" H 4250 1950 50  0001 C CNN
+	1    4250 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5F6DDC55
+P 3700 2750
+F 0 "C?" H 3792 2796 50  0000 L CNN
+F 1 "C_Small" H 3792 2705 50  0000 L CNN
+F 2 "" H 3700 2750 50  0001 C CNN
+F 3 "~" H 3700 2750 50  0001 C CNN
+	1    3700 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5F6DED41
+P 4150 2750
+F 0 "C?" H 4242 2796 50  0000 L CNN
+F 1 "C_Small" H 4242 2705 50  0000 L CNN
+F 2 "" H 4150 2750 50  0001 C CNN
+F 3 "~" H 4150 2750 50  0001 C CNN
+	1    4150 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 1850 4250 1800
+Wire Wire Line
+	4250 2050 4250 2100
+Wire Wire Line
+	2600 1550 2600 1800
+Wire Wire Line
+	2600 2050 2600 2100
+$Comp
+L Device:R_Small R?
+U 1 1 5F6EA220
+P 3450 1800
+F 0 "R?" V 3254 1800 50  0000 C CNN
+F 1 "R_Small" V 3345 1800 50  0000 C CNN
+F 2 "" H 3450 1800 50  0001 C CNN
+F 3 "~" H 3450 1800 50  0001 C CNN
+	1    3450 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F6EB19E
+P 3450 2100
+F 0 "R?" V 3254 2100 50  0000 C CNN
+F 1 "R_Small" V 3345 2100 50  0000 C CNN
+F 2 "" H 3450 2100 50  0001 C CNN
+F 3 "~" H 3450 2100 50  0001 C CNN
+	1    3450 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3350 2100 2600 2100
+Connection ~ 2600 2100
+Wire Wire Line
+	2600 2100 2600 2200
+Wire Wire Line
+	3350 1800 2600 1800
+Connection ~ 2600 1800
+Wire Wire Line
+	2600 1800 2600 1850
+Wire Wire Line
+	3550 1800 4250 1800
+Connection ~ 4250 1800
+Wire Wire Line
+	3550 2100 3700 2100
+Connection ~ 4250 2100
+$Comp
+L Microtan_65_CPU-cache:GND #PWR?
+U 1 1 5F6F0720
+P 3700 3000
+F 0 "#PWR?" H 3700 3000 30  0001 C CNN
+F 1 "GND" H 3700 2930 30  0001 C CNN
+F 2 "" H 3700 3000 60  0000 C CNN
+F 3 "" H 3700 3000 60  0000 C CNN
+	1    3700 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Microtan_65_CPU-cache:GND #PWR?
+U 1 1 5F6F0B91
+P 4150 3000
+F 0 "#PWR?" H 4150 3000 30  0001 C CNN
+F 1 "GND" H 4150 2930 30  0001 C CNN
+F 2 "" H 4150 3000 60  0000 C CNN
+F 3 "" H 4150 3000 60  0000 C CNN
+	1    4150 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2850 4150 3000
+Wire Wire Line
+	4150 2650 4150 2100
+Connection ~ 4150 2100
+Wire Wire Line
+	4150 2100 4250 2100
+Wire Wire Line
+	3700 2650 3700 2100
+Connection ~ 3700 2100
+Wire Wire Line
+	3700 2100 4150 2100
+Wire Wire Line
+	3700 2850 3700 3000
+$EndSCHEMATC
