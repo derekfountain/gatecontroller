@@ -35,3 +35,63 @@ It's not really a standard design, but th emotor thing is a sort of h bridge
 10 is backwards
 the input has a current limiting series resistor, clamping diodes and a capacitor to stop high frequency noise to some degree
 
+
+=== BRAIN DUMP FOLLOWS ===
+Andrew Menadue ok, can't sleep. :slightly_smiling_face:
+01:10
+I've been thinking. The problem with using just PCBs, whih I'd do with this project is you have no working gate controller, so I think it probably is better prptotyping on veroboard. Then you have a working system quicker. And you learn about the tedium of making veroboard prototypes. :slightly_smiling_face:
+01:19
+Andrew Menadue So the design wiil be fleshed out and a prototype of the system constructed, any changes or fixes to the prototype will be strictly reflected in the schematic in kicad. Then when the prototype is working and has run for a week or so, then the V1 schemati cis frozen and the pcb is laid out. That goes off for manufacture and the prototype carries on running. The V2 schematic is then updated with any changes needed as things go wrong with the prorotype. If anything does. The PCB arrives and is populated, and fitted to see if it works. The PCB is modified as things go wrong etc and the schematic strictly updated. V2 PCB is sent off and comes back and replaces PCB1.
+01:19
+I think you get the idea.
+01:20
+Firt stage is requirements document. You need a formal document that describes what the inputs are, and the outputs, in table form showing voltages and currents, and giving each a formal name that is exclusively used throughout schematic and PCB.
+01:21
+You also have a section for the functional behaviour of the system, with formal names for functions. This avoiuds talking at cross purposes.
+01:22
+Once that document exists and is correct and frozen at V1 then the schematic can be created from it (and the firmware started).
+01:23
+The prototype is created from the schematic.
+01:24
+This is essentially how any hardware project would work, in my opinion.
+01:26
+I think you should consider using surface mount for the PCB components and through hole for the prototype. You can use throught hole for both if you want, but surface mount tends to be cheaper and it avoids the chopping off of leads so is quicker to assemble, I think. It is also fiddlier so you may not want to do that. There will be some through hole parts like relays and connectors that I'd recommend using.
+01:28
+The prototype can be built on veroboard and I'd say that a modular approach would be good. So one big bit of veroboard and plug in modules, all identical, for things iike inputs and outputs.  Any piee of the circuit that is the same as another should be modularised. This allows you to build the prototype a bit easier and test modules separately if needed. If you blow a bit up then you can swap other modules in. Plan on stuff blowing up. It probably will.
+01:29
+Build the prototype on the bench and test it there before fitting to the gate post. It's more convenient and you don't blow up things if it goes wrong.
+01:29
+Onceit's working on the bench, move it to the site and test it there. It shpould just work.
+01:30
+The module system should not be carried over to the final PCB in this case as connectors are a source of unreliability, but the modules an be laid out identically on the PCB, which makes it a bit easier.
+01:33
+So it's like code development, but the agile approach doesn't work as well as it is time consuming rewiring prototypes. You need to put more effort into designing before bilding so you build less often. Some stuff has to be tested as you don't know what the values are (a la lava lamp) but a lot of stuff can be pinned out up front in the gate project.
+01:33
+Before prototyping a piece of circuit draw a schematic and work out all the values. Then build it.
+01:33
+Then test it
+01:34
+All the time  the schemati should be a strict representation of what is protoyped because what the PCB ends up as is a strict transformation of the schematic.
+01:35
+Anything wrong in the schematic will be wrong on the PCB and cause a spin of the PCB which costs time and money and requires modification of the PCB (wires, cut tracks)  whih costs time and money.
+01:35
+Expect to have at least 2 PCB designs made.
+01:36
+The first will probably have things wrong with it. It will be possible in most cases to modify it, but the desiredoutput from all this is a PCB that work reliably and has no modifications. This lets you build more in the future without having to worry about modifying PCBs.
+01:37
+If you are happy having modified PCBs as your final system then I'd recommend populating and modifying more than 1 so you have replacements ready to go.
+01:39
+Make detailed notes of modifications and a good place to do this is a workbook. A diary format document of everything you do. This project is complicated enough that without it to refer back to stuff can get forgotten. It's not like software in that you don't have the code to refer back to, you have a blob of wires, components and connections, and that is harder to understand and there's no comments.
+01:40
+You will see what I mean once you have a protoyype.
+01:43
+Prototype: I'd say a sheet of plywood or such like with the vero securely mounted on it, then modules plugged in with dil headers and sockets. Maybe look at buying the PSUs that will finally be used, the alternatives are buying anothe rbench supply for the 12V or having the protoype drop the 24 down to 12 and 5. If you do that then the prototype has differnt power to the final design, whih is a big differece. The prototype should really be the final design in a different form factor so they work as similarly as possible. Of course that isn't going ot happen so you have to manage how different they are and how they are different.
+
+01:43
+Hmm, massive brain dump.
+01:44
+I've also updated the schematic.
+01:44
+ok, I should be able to sleep now.
+===
+
